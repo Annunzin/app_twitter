@@ -1,0 +1,3 @@
+fail new nomprojet
+bundle exec rails s
+bundle install
