@@ -1122,3 +1122,1348 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 1241ms (Views: 1237.3ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:18:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 3367ms (Views: 3333.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 08:18:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 273ms (Views: 241.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:18:25 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:22:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.1ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.7ms)
+Started GET "/twaat" for 127.0.0.1 at 2017-03-16 08:22:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.0ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:22:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.1ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.3ms)
+Started GET "/twaat" for 127.0.0.1 at 2017-03-16 08:22:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.1ms)
+Started GET "/twaat" for 127.0.0.1 at 2017-03-16 08:22:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:22:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:573:in `check_pending!'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/migration.rb:549:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/callbacks.rb:90:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.4.0/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.0.2/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/static.rb:136:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/configuration.rb:232:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:578:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:415:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/server.rb:275:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.7.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTwaats (20170316072145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "twaats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Content" varchar, "img_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316072145"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:23:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (10.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:23:25 +0100
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (1.6ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (6.2ms)
+Completed   in 6255ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:23:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (1.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 2016ms (Views: 2003.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/twaats/new" for 127.0.0.1 at 2017-03-16 08:23:40 +0100
+Processing by TwaatsController#new as HTML
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (335.1ms)
+  Rendered twaats/new.html.erb within layouts/application (343.4ms)
+Completed 200 OK in 523ms (Views: 485.2ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/twaats/" for 127.0.0.1 at 2017-03-16 08:26:00 +0100
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (3.3ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 1732ms (Views: 1673.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/twaats/new" for 127.0.0.1 at 2017-03-16 08:26:03 +0100
+Processing by TwaatsController#new as HTML
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (1.5ms)
+  Rendered twaats/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 50.8ms | ActiveRecord: 7.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropUsers (20170316073558)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316073558"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DropTwaats (20170316073607)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316073607"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/twaats/" for 127.0.0.1 at 2017-03-16 08:36:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (1.8ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 1776ms (Views: 1766.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/twaats/" for 127.0.0.1 at 2017-03-16 08:36:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (1.6ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 6864ms (Views: 6846.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:36:46 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 107ms (Views: 44.5ms | ActiveRecord: 11.1ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY version[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropUser (20170316073658)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316073658"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserToTwaats (20170316073842)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "twaats" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_twaats_on_user_id" ON "twaats" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316073842"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_twaats_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_twaats_on_user_id' AND type='index'
+[0m
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:39:13 +0100
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:39:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (16.9ms)
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:39:25 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 5664ms (Views: 5660.3ms | ActiveRecord: 3.1ms)
+
+
+Completed 200 OK in 8538ms (Views: 8513.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:39:35 +0100
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (1.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 272ms (Views: 246.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/twaats/new" for 127.0.0.1 at 2017-03-16 08:39:36 +0100
+Processing by TwaatsController#new as HTML
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (18.7ms)
+  Rendered twaats/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 75ms (Views: 58.8ms | ActiveRecord: 11.9ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY version[0m
+Started GET "/twaats/new" for 127.0.0.1 at 2017-03-16 08:42:18 +0100
+Processing by TwaatsController#new as HTML
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (1.6ms)
+  Rendered twaats/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1697ms (Views: 1677.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/twaats" for 127.0.0.1 at 2017-03-16 08:43:41 +0100
+Processing by TwaatsController#index as HTML
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (3.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats"[0m
+  Rendered twaats/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1707ms (Views: 1702.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-03-16 08:43:56 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 74ms (Views: 51.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-03-16 08:44:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 89ms (Views: 56.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 08:44:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1694ms (Views: 1685.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 08:44:17 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 80ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 08:54:39 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (414.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (426.0ms)
+Completed 200 OK in 2265ms (Views: 1841.3ms | ActiveRecord: 421.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 08:55:51 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1659ms (Views: 1656.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:00:59 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1636ms (Views: 1630.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:01:56 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1921ms (Views: 1916.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:02:12 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1825ms (Views: 1822.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:02:52 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2180ms (Views: 2177.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 09:04:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1858ms (Views: 1838.9ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:04:53 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:05:08 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:19: syntax error, unexpected ')', expecting '='
+...buffer.append=( link_to, user );@output_buffer.safe_append='...
+...                               ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/index.html.erb:19: syntax error, unexpected ')', expecting '='
+app/views/users/index.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:08:04 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:08:43 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:08:52 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:21: syntax error, unexpected '<'
+        	</img>",user%>
+        	 ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:22: unknown regexp options - td
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:23: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.ap...
+         ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.append=( link_to 'Show', user );@output_buffer.safe...
+...                               ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:24: unknown regexp options - td
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:25: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.ap...
+         ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...uffer.append=( link_to 'Destroy', user, method: :delete, dat...
+...                               ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' } );@output_buffe...
+...                               ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:26: unknown regexp options - tr
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:29: unknown regexp options - tabl
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:31: syntax error, unexpected '<'
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'New User', new_user_path );@outp...
+...                               ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:34: unterminated string meets end of file
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:34: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/index.html.erb:21: syntax error, unexpected '<'
+app/views/users/index.html.erb:22: unknown regexp options - td
+app/views/users/index.html.erb:23: syntax error, unexpected '<'
+app/views/users/index.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/users/index.html.erb:24: unknown regexp options - td
+app/views/users/index.html.erb:25: syntax error, unexpected '<'
+app/views/users/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/users/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/users/index.html.erb:26: unknown regexp options - tr
+app/views/users/index.html.erb:29: unknown regexp options - tabl
+app/views/users/index.html.erb:31: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/users/index.html.erb:34: unterminated string meets end of file
+app/views/users/index.html.erb:34: syntax error, unexpected end-of-input, expecting ')'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:09:03 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1795ms (Views: 1790.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:09:54 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1704ms (Views: 1701.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:10:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1863ms (Views: 1860.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:29 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1655ms (Views: 1651.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:34 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:35 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:35 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 129ms (Views: 126.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:35 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:11:37 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1651ms (Views: 1648.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:12:17 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1658ms (Views: 1655.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:12:34 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `path' for #<#<Class:0x007f4a682f8988>:0x007f4a70115f00>):
+    17:       	
+    18:         <td><%= user.Username %></td>
+    19:         <td>
+    20:         	<a href="<% path(user) %>" >test</a>
+    21:         	<img src="<%= user.img_url %>" onclick="" >
+    22:         	</img>
+    23:         </td>
+  
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb__3059640182699800943_69978842248660'
+app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__3059640182699800943_69978842248660'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:12:50 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (34.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `path' for #<#<Class:0x007f4a682f8988>:0x007f4a6ddfac50>):
+    17:       	
+    18:         <td><%= user.Username %></td>
+    19:         <td>
+    20:         	<a href="<% path(user) %>" >test</a>
+    21:         	<img src="<%= user.img_url %>" onclick="" >
+    22:         	</img>
+    23:         </td>
+  
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb__3059640182699800943_69978823842620'
+app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__3059640182699800943_69978823842620'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:12:59 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:13:01 +0100
+Completed 200 OK in 1730ms (Views: 1727.7ms | ActiveRecord: 1.8ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:14:13 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1561ms (Views: 1558.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:14:34 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for #<User:0x007f4a6dd18e90>):
+    18:         <td><%= user.Username %></td>
+    19:         <td>
+    20:        
+    21:         	<%= link_to image_tag user.img_url,user %>
+    22: 
+    23:         </td>
+    24:         <td><%= link_to 'Show', user %></td>
+  
+app/views/users/index.html.erb:21:in `block in _app_views_users_index_html_erb__3059640182699800943_69978675850160'
+app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__3059640182699800943_69978675850160'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.2ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:15:15 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/users/lpro/casir/annunzin/Ruby/Twitter/app_twitter/app/views/users/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:16:15 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1553ms (Views: 1549.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 09:16:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 243ms (Views: 240.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:17:19 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1854ms (Views: 1851.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:17:24 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 257ms (Views: 254.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:17:33 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 224ms (Views: 221.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:18:07 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1831ms (Views: 1828.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:18:20 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1655ms (Views: 1652.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:18:45 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:19:46 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1488ms (Views: 1484.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:21:45 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1652ms (Views: 1649.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:22:29 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1568ms (Views: 1565.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:22:46 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1710ms (Views: 1707.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:24:42 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 1988ms (Views: 1973.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:24:57 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 200ms (Views: 197.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:25:04 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 456ms (Views: 453.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:27:28 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1982ms (Views: 1979.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:28:06 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2035ms (Views: 2032.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-03-16 09:28:11 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 224ms (Views: 206.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:28:27 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2202ms (Views: 2198.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:28:34 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 297ms (Views: 294.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:28:41 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 311ms (Views: 308.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:28:54 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 1888ms (Views: 1883.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:29:14 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 328ms (Views: 325.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:29:41 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 2012ms (Views: 2008.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:30:00 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 3428ms (Views: 3425.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:30:42 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1817ms (Views: 1814.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:32:15 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1807ms (Views: 1804.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:33:34 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1830ms (Views: 1827.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:33:47 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 327ms (Views: 324.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:33:56 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 294ms (Views: 291.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:34:12 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1830ms (Views: 1827.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:34:32 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 224ms (Views: 220.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:35:06 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1803ms (Views: 1800.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:35:14 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1724ms (Views: 1721.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:35:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 200ms (Views: 197.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 09:36:02 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1818ms (Views: 1814.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-16 09:36:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 747ms (Views: 743.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:36:06 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:36:16 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1845ms (Views: 1842.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:37:02 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (89.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (90.9ms)
+Completed 200 OK in 1869ms (Views: 1779.0ms | ActiveRecord: 89.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:37:25 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1828ms (Views: 1825.4ms | ActiveRecord: 1.8ms)
+
+

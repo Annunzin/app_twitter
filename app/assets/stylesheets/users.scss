@@ -1,3 +1,66 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+img{
+  
+  
+  width:100px;
+  height:100px;
+
+  
+}
+
+
+
+
+h1{
+  
+  text-align:center;
+}
+
+
+
+
+
+
+.vignette{
+  display:inline-block;
+  width: 10%;
+  height:auto;
+}
+.btn {
+  margin:auto;
+  width:200px;
+  text-align:center;
+  background: #616161;
+  background-image: -webkit-linear-gradient(top, #616161, #64bf5f);
+  background-image: -moz-linear-gradient(top, #616161, #64bf5f);
+  background-image: -ms-linear-gradient(top, #616161, #64bf5f);
+  background-image: -o-linear-gradient(top, #616161, #64bf5f);
+  background-image: linear-gradient(to bottom, #616161, #64bf5f);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.btn a{
+  text-decoration: none;
+  color:white;
+}
+.btn a:hover{
+  background-color:#00ff04; 
+  color:black;
+}
+
+.btn:hover {
+  color:black;
+  background: #00ff04;
+  text-decoration: none;
+}

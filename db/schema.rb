@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309074354) do
+ActiveRecord::Schema.define(version: 20170316073842) do
+
+  create_table "twaats", force: :cascade do |t|
+    t.string   "Content"
+    t.string   "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_twaats_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "Username"

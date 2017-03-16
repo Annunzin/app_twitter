@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	
+	background-color: rgb(184,198,223); // Old browsers
+	@include filter-gradient(#b8c6df, #6d88b7, vertical); // IE6-9
+	@include background-image(linear-gradient(top, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%));
+}

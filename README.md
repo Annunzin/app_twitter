@@ -30,6 +30,17 @@
 - bundle exec rake routes
 ## Create user
 - rails generate scaffold User Username:string img_url:string
+
+## Create tweet 
+- rails generate scaffold Twaat Content:string img_url:string
+
 ## Create table 
 - bundle exec rails db:migrate RAILS_ENV=development
 
+## Réferences
+
+- bin/rails g migration add_user_to_twaats user:references
+
+## Recréer base 
+
+- rails db:structure:load

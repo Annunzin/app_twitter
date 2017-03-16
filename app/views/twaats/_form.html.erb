@@ -1,0 +1,27 @@
+<%= form_for(twaat) do |f| %>
+  <% if twaat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(twaat.errors.count, "error") %> prohibited this twaat from being saved:</h2>
+
+      <ul>
+      <% twaat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Content %>
+    <%= f.text_field :Content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
