@@ -44,3 +44,14 @@
 ## Recréer base 
 
 - rails db:structure:load
+
+## Commandes rails
+
+### Lancer la console rails
+- rails c
+
+### Montrer toutes les commandes
+- rails -T
+
+
+LENGTH lol

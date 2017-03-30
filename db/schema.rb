@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170316073842) do
 
   create_table "twaats", force: :cascade do |t|
-    t.string   "Content"
+    t.string   "content"
     t.string   "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170316073842) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "Username"
+    t.string   "username"
     t.string   "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

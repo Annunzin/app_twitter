@@ -4,7 +4,9 @@ class TwaatsController < ApplicationController
   # GET /twaats
   # GET /twaats.json
   def index
-    @twaats = Twaat.all
+    @user = User.find(params[:user_id])
+    
+    @twaats = @user.twaats
   end
 
   # GET /twaats/1
@@ -25,7 +27,7 @@ class TwaatsController < ApplicationController
   # POST /twaats.json
   def create
     @twaat = Twaat.new(twaat_params)
-
+    
     respond_to do |format|
       if @twaat.save
         format.html { redirect_to @twaat, notice: 'Twaat was successfully created.' }
@@ -69,6 +71,6 @@ class TwaatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def twaat_params
-      params.require(:twaat).permit(:Content, :img_url)
+      params.require(:twaat).permit(:content, :img_url,:user_id)
     end
 end

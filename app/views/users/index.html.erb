@@ -9,10 +9,10 @@
 	    
 	    <div class="vignette">
 	      	
-	        <%= user.Username %>
+	        <%= user.username %>
 	       
 	       
-	        <%= link_to image_tag(user.img_url),user %>
+	        <%= link_to image_tag(user.img_url), user_twaats_path(user) %>
 	
 	      
 	        <%= link_to 'Edit', edit_user_path(user) %>
