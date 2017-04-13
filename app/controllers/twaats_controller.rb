@@ -12,11 +12,14 @@ class TwaatsController < ApplicationController
   # GET /twaats/1
   # GET /twaats/1.json
   def show
+    @twaats = @user.twaats
   end
 
   # GET /twaats/new
   def new
+    
     @twaat = Twaat.new
+    @twaat.attributes = {user_id: params[:user_id]} 
   end
 
   # GET /twaats/1/edit
@@ -27,10 +30,10 @@ class TwaatsController < ApplicationController
   # POST /twaats.json
   def create
     @twaat = Twaat.new(twaat_params)
-    
+    @twaat.attributes = {user_id: params[:user_id]} 
     respond_to do |format|
       if @twaat.save
-        format.html { redirect_to @twaat, notice: 'Twaat was successfully created.' }
+        format.html { redirect_to @user_twaat, notice: 'Twaat was successfully created.' }
         format.json { render :show, status: :created, location: @twaat }
       else
         format.html { render :new }

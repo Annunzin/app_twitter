@@ -16,9 +16,9 @@
       <tr>
         <td><%= twaat.content %></td>
         <td><%= twaat.img_url %></td>
-        <td><%= link_to 'Show', twaat %></td>
-        <td><%= link_to 'Edit', edit_twaat_path(twaat) %></td>
-        <td><%= link_to 'Destroy', twaat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_twaat_path(id: twaat.id) %></td>
+        <td><%= link_to 'Edit', edit_user_twaat_path(id: twaat.id) %></td>
+        <td><%= link_to 'Destroy', user_twaat_path(id: twaat.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Twaat', new_twaat_path %>
+<%= link_to 'New Twaat', new_user_twaat_path %>
