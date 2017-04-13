@@ -1,3 +1,4 @@
 fail new nomprojet
 bundle exec rails s
 bundle install
+bin/rails generate controller Articles
