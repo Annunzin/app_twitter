@@ -16,14 +16,14 @@
 	
 	      <div>
 
-	        <%= link_to 'Edit', edit_user_path(user) %>
+	        <%= link_to 'Edit', edit_user_path(user),class: "myButton" %>
 </div>
-	        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+	        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "myButton" %>
 	    </div>
     <% end %>
 
 <br>
 <div class="btn" >
-<%= link_to 'New User', new_user_path %>	
+<%= link_to 'Create a new user', new_user_path %>	
 </div>
 

@@ -13,5 +13,5 @@
 
 <img src="<%= @twaats.img_url %>" salt="<%= @twaats.img_url %>" >
 </div>
-<%= link_to 'Edit', edit_user_twaat_path(id: @twaats.id) %> |
-<%= link_to 'Back', user_twaats_path(params[:user_id]) %>
+<%= link_to 'Edit', edit_user_twaat_path(id: @twaats.id),class: "myButton" %> |
+<%= link_to 'Back', user_twaats_path(params[:user_id]),class: "myButton" %>

@@ -17,9 +17,9 @@
       <tr>
         <td><%= twaat.content %></td>
         <td><img src="<%= twaat.img_url %>" alt="<%= twaat.img_url %>" ></td>
-        <td><%= link_to 'Show', user_twaat_path(id: twaat.id) %></td>
-        <td><%= link_to 'Edit', edit_user_twaat_path(id: twaat.id) %></td>
-        <td><%= link_to 'Destroy', user_twaat_path(id: twaat.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Details', user_twaat_path(id: twaat.id),class: "myButton" %></td>
+        <td><%= link_to 'Edit', edit_user_twaat_path(id: twaat.id),class: "myButton" %></td>
+        <td><%= link_to 'Destroy', user_twaat_path(id: twaat.id),class: "myButton" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,5 +28,5 @@
 <br>
 </div>
 
-<%= link_to 'New Twaat', new_user_twaat_path %>
-<%= link_to 'Retour au utilisateurs', users_path %>
+<%= link_to 'Create a new twaat', new_user_twaat_path,class: "myButton" %>
+<%= link_to 'Go back', users_path,class: "myButton" %>
