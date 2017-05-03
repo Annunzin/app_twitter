@@ -8047,3 +8047,851 @@ Processing by TwaatsController#index as HTML
 Completed 200 OK in 52ms (Views: 43.8ms | ActiveRecord: 7.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-03 15:38:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 1385ms (Views: 1327.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:38:20 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 139ms (Views: 81.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats/new" for 127.0.0.1 at 2017-05-03 15:38:22 +0200
+Processing by TwaatsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (21.5ms)
+  Rendered twaats/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 154ms (Views: 129.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:38:56 +0200
+Processing by TwaatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yuws79ApHtN+E4w9/VBdJbCYSzx5L7o6y0cWYSBIvk/TAs1u6SvttG9ncwT2ZuIr8HvL6jFXK/yXEPLD2YXCog==", "twaat"=>{"content"=>"test", "img_url"=>"https://www.google.fr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiar62w7NPTAhVIPxoKHbL7DJ8QjRwIBw&url=http%3A%2F%2Fwww.iconarchive.com%2Ftag%2Fwindows&psig=AFQjCNHQVtQnqDrrBMV__KtNO9RHpJ-paw&ust=1493905116769198"}, "commit"=>"Crée un twaat", "user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "twaats" ("content", "img_url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "test"], ["img_url", "https://www.google.fr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiar62w7NPTAhVIPxoKHbL7DJ8QjRwIBw&url=http%3A%2F%2Fwww.iconarchive.com%2Ftag%2Fwindows&psig=AFQjCNHQVtQnqDrrBMV__KtNO9RHpJ-paw&ust=1493905116769198"], ["created_at", 2017-05-03 13:38:56 UTC], ["updated_at", 2017-05-03 13:38:56 UTC], ["user_id", 3]]
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 119.5ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/twaats_controller.rb:36:in `block (2 levels) in create'
+app/controllers/twaats_controller.rb:34:in `create'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (903.3ms)
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:39:13 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 141ms (Views: 97.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/3/twaats/4" for 127.0.0.1 at 2017-05-03 15:39:23 +0200
+Processing by TwaatsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AMH0cKn+mlmxodnzzEOT7xDVS4P85PQQ6QqLUsHs9mRDCj9to2OhHTZ8YrD7D6CLARPeICtDa+9hIQkCLy1gwg==", "user_id"=>"3", "id"=>"4"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "twaats" WHERE "twaats"."id" = ?[0m  [["id", 4]]
+  [1m[35m (139.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 141.1ms)
+
+
+  
+NameError (undefined local variable or method `twaats_url' for #<TwaatsController:0xa414788>
+Did you mean?  twaat_params):
+  
+app/controllers/twaats_controller.rb:64:in `block (2 levels) in destroy'
+app/controllers/twaats_controller.rb:63:in `destroy'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (843.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-03 15:39:31 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 110ms (Views: 90.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:39:32 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 102ms (Views: 83.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:39:34 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 312ms (Views: 290.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/twaats/new" for 127.0.0.1 at 2017-05-03 15:53:57 +0200
+Processing by TwaatsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (2.0ms)
+  Rendered twaats/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 118ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:54:00 +0200
+Processing by TwaatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38po+exfqffA7ed7JwUmqajYCy8rFQ2z4UBdJ6oWYPJuJIl41V1akNGZGEIsM5mn6DuL+WNtnHW9F7mFU9scHw==", "twaat"=>{"content"=>"tetts", "img_url"=>""}, "commit"=>"Crée un twaat", "user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (12.5ms)[0m  [1m[32mINSERT INTO "twaats" ("content", "img_url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "tetts"], ["img_url", ""], ["created_at", 2017-05-03 13:54:00 UTC], ["updated_at", 2017-05-03 13:54:00 UTC], ["user_id", 3]]
+  [1m[35m (136.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 148.7ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/twaats_controller.rb:36:in `block (2 levels) in create'
+app/controllers/twaats_controller.rb:34:in `create'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (887.2ms)
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:55:12 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 104ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 15:55:13 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 105ms (Views: 86.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 15:55:44 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 245ms (Views: 227.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:56:07 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 242ms (Views: 218.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:57:09 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 307ms (Views: 273.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats/new" for 127.0.0.1 at 2017-05-03 15:57:17 +0200
+Processing by TwaatsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (2.5ms)
+  Rendered twaats/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 110ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:57:20 +0200
+Processing by TwaatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ELn+QFC8OPg7DH2QG/an0N2hLVAUfSZCFImCc9Mj41ehVx/Bab7Lnyp4gqkQwBjenUKthlwFt4RI3mbRKu6fug==", "twaat"=>{"content"=>"twaaat", "img_url"=>""}, "commit"=>"Crée un twaat", "user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (14.5ms)[0m  [1m[32mINSERT INTO "twaats" ("content", "img_url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "twaaat"], ["img_url", ""], ["created_at", 2017-05-03 13:57:20 UTC], ["updated_at", 2017-05-03 13:57:20 UTC], ["user_id", 3]]
+  [1m[35m (170.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 185.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"twaats", :user_id=>nil} missing required keys: [:user_id]):
+  
+app/controllers/twaats_controller.rb:36:in `block (2 levels) in create'
+app/controllers/twaats_controller.rb:34:in `create'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (932.7ms)
+Started GET "/users/3/twaats/new" for 127.0.0.1 at 2017-05-03 15:58:14 +0200
+Processing by TwaatsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (2.5ms)
+  Rendered twaats/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 128ms (Views: 105.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:58:19 +0200
+Processing by TwaatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3cKpyXFMJq/NTLBB4p4YBdXJVEemV7sXYOvr/ULk8omeCWLUe9Ed60qRCwLV0ithxA/B5HHwJOjowGmtrCVkLw==", "twaat"=>{"content"=>"twaaateeeeeee", "img_url"=>""}, "commit"=>"Crée un twaat", "user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (18.6ms)[0m  [1m[32mINSERT INTO "twaats" ("content", "img_url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "twaaateeeeeee"], ["img_url", ""], ["created_at", 2017-05-03 13:58:19 UTC], ["updated_at", 2017-05-03 13:58:19 UTC], ["user_id", 3]]
+  [1m[35m (166.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users/3/twaats
+Completed 302 Found in 209ms (ActiveRecord: 185.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 15:58:19 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 124ms (Views: 88.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats/6/edit" for 127.0.0.1 at 2017-05-03 15:58:42 +0200
+Processing by TwaatsController#edit as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/edit.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (1.5ms)
+  Rendered twaats/edit.html.erb within layouts/application (89.8ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `twaat_path' for #<#<Class:0x48bcb20>:0x9dd8f50>):
+    2: 
+    3: <%= render 'form', twaat: @twaat %>
+    4: 
+    5: <%= link_to 'Show', @twaat %> |
+    6: <%= link_to 'Back', twaats_path %>
+  
+app/views/twaats/edit.html.erb:5:in `_app_views_twaats_edit_html_erb___717028655_82759884'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (769.4ms)
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:00:33 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 121ms (Views: 88.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:00:35 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 113ms (Views: 89.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/3/twaats/7" for 127.0.0.1 at 2017-05-03 16:00:39 +0200
+Processing by TwaatsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2iLeMGk7npYZCI1VDIrf9eJ0wgNDGp0VBPKKCoYNO0mZ6RUtY6al0p7VNhY7xuyR87JXoJS9AuqM2QhaaMyt7w==", "user_id"=>"3", "id"=>"7"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (20.6ms)[0m  [1m[31mDELETE FROM "twaats" WHERE "twaats"."id" = ?[0m  [["id", 7]]
+  [1m[35m (195.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users/3/twaats
+Completed 302 Found in 225ms (ActiveRecord: 216.1ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:00:39 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 234ms (Views: 204.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats/5" for 127.0.0.1 at 2017-05-03 16:00:48 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"5"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `twaats' for nil:NilClass):
+  
+app/controllers/twaats_controller.rb:15:in `show'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (791.9ms)
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:01:11 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 107ms (Views: 87.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:01:13 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 122ms (Views: 99.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/twaats/new" for 127.0.0.1 at 2017-05-03 16:01:17 +0200
+Processing by TwaatsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering twaats/new.html.erb within layouts/application
+  Rendered twaats/_form.html.erb (2.0ms)
+  Rendered twaats/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 112ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:01:19 +0200
+Started GET "/" for 127.0.0.1 at 2017-05-03 16:01:19 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 111ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-03 16:01:19 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 181ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 149ms (Views: 127.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 16:01:21 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 118ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:01:26 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 114ms (Views: 89.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:03:19 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `twaats' for nil:NilClass):
+  
+app/controllers/twaats_controller.rb:15:in `show'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (892.1ms)
+Started GET "/twaats/6" for 127.0.0.1 at 2017-05-03 16:03:25 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/twaats/6"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (22.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1062.8ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:03:30 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `twaats' for nil:NilClass):
+  
+app/controllers/twaats_controller.rb:15:in `show'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (804.3ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:04:24 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `Content' for #<Twaat:0xc620160>
+Did you mean?  content
+               content=
+               content?):
+    2: 
+    3: <p>
+    4:   <strong>Content:</strong>
+    5:   <%= @twaat.Content %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/twaats/show.html.erb:5:in `_app_views_twaats_show_html_erb___107499209_96586080'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (750.0ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:06:43 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `twaats' for #<TwaatsController:0x4906ba8>
+Did you mean?  @twaat):
+  
+app/controllers/twaats_controller.rb:15:in `show'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (899.8ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:07:06 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (uninitialized constant TwaatsController::Twaats):
+  
+app/controllers/twaats_controller.rb:15:in `show'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (890.0ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:08:08 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `Content' for #<Twaat:0xa714d88>
+Did you mean?  content
+               content=
+               content?):
+    2: 
+    3: <p>
+    4:   <strong>Content:</strong>
+    5:   <%= @twaat.Content %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/twaats/show.html.erb:5:in `_app_views_twaats_show_html_erb___107499209_91503396'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (872.2ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:15:07 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (103.2ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `twaat' for #<#<Class:0xae87000>:0xc11e128>
+Did you mean?  @twaat
+               @twaats):
+    2: 
+    3: <p>
+    4:   <strong>Content:</strong>
+    5:   <%= twaat.content %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/twaats/show.html.erb:5:in `_app_views_twaats_show_html_erb___107499209_101250096'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (759.0ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:15:28 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (1.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (65.6ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_twaat_path' for #<#<Class:0xae87000>:0xb14f3e0>
+Did you mean?  edit_user_twaat_path):
+    10:   <%= @twaats.img_url %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_twaat_path(@twaat) %> |
+    14: <%= link_to 'Back', twaats_path %>
+  
+app/views/twaats/show.html.erb:13:in `_app_views_twaats_show_html_erb___107499209_92962200'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (874.0ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:17:03 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (126.1ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `twaats_path' for #<#<Class:0xae87000>:0xaf42668>
+Did you mean?  @twaats):
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_user_twaat_path(id: @twaats.id) %> |
+    14: <%= link_to 'Back', twaats_path %>
+  
+app/views/twaats/show.html.erb:14:in `_app_views_twaats_show_html_erb___107499209_91887420'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (873.6ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:18:12 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (106.0ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0xae87000>:0xc4e7c50>):
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_user_twaat_path(id: @twaats.id) %> |
+    14: <%= link_to 'Back', user_twaats_path(user) %>
+  
+app/views/twaats/show.html.erb:14:in `_app_views_twaats_show_html_erb___107499209_87712224'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (897.8ms)
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:19:23 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (1.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 125ms (Views: 83.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:19:36 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 127ms (Views: 82.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:19:41 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 118ms (Views: 85.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3/twaats/6" for 127.0.0.1 at 2017-05-03 16:19:48 +0200
+Processing by TwaatsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"6"}
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "twaats".* FROM "twaats" WHERE "twaats"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering twaats/show.html.erb within layouts/application
+  Rendered twaats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 106ms (Views: 82.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:19:52 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 114ms (Views: 82.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:20:38 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :user_id=>"3"} missing required keys: [:id]):
+    27: <br>
+    28: 
+    29: <%= link_to 'New Twaat', new_user_twaat_path %>
+    30: <%= link_to 'Retour au utilisateurs', user_path %>
+  
+app/views/twaats/index.html.erb:30:in `_app_views_twaats_index_html_erb__616741894_100968084'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (767.7ms)
+Started GET "/twaats/6" for 127.0.0.1 at 2017-05-03 16:20:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/twaats/6"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1110.7ms)
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:21:17 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.0ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 114ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-05-03 16:21:18 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 112ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/twaats" for 127.0.0.1 at 2017-05-03 16:21:30 +0200
+Processing by TwaatsController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twaats/index.html.erb within layouts/application
+  [1m[36mTwaat Load (0.5ms)[0m  [1m[34mSELECT "twaats".* FROM "twaats" WHERE "twaats"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered twaats/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 115ms (Views: 91.7ms | ActiveRecord: 1.0ms)
+
+

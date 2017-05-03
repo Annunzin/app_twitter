@@ -12,7 +12,7 @@ class TwaatsController < ApplicationController
   # GET /twaats/1
   # GET /twaats/1.json
   def show
-    @twaats = @user.twaats
+    @twaats = Twaat.find(params[:id])
   end
 
   # GET /twaats/new
@@ -33,7 +33,7 @@ class TwaatsController < ApplicationController
     @twaat.attributes = {user_id: params[:user_id]} 
     respond_to do |format|
       if @twaat.save
-        format.html { redirect_to @user_twaat, notice: 'Twaat was successfully created.' }
+        format.html { redirect_to user_twaats_path(params[:user_id]), notice: 'Twaat was successfully created.' }
         format.json { render :show, status: :created, location: @twaat }
       else
         format.html { render :new }
@@ -61,7 +61,7 @@ class TwaatsController < ApplicationController
   def destroy
     @twaat.destroy
     respond_to do |format|
-      format.html { redirect_to twaats_url, notice: 'Twaat was successfully destroyed.' }
+      format.html { redirect_to user_twaats_path(params[:user_id]), notice: 'Twaat was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

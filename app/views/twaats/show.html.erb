@@ -2,13 +2,13 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @twaat.Content %>
+  <%= @twaats.content %>
 </p>
 
 <p>
   <strong>Img url:</strong>
-  <%= @twaat.img_url %>
+  <%= @twaats.img_url %>
 </p>
 
-<%= link_to 'Edit', edit_twaat_path(@twaat) %> |
-<%= link_to 'Back', twaats_path %>
+<%= link_to 'Edit', edit_user_twaat_path(id: @twaats.id) %> |
+<%= link_to 'Back', user_twaats_path(params[:user_id]) %>
