@@ -2,5 +2,5 @@
 
 <%= render 'form', twaat: @twaat %>
 
-<%= link_to 'Show', @twaat %> |
-<%= link_to 'Back', twaats_path %>
+<%= link_to 'Show', user_twaat_path(id: @twaat.id) %> |
+<%= link_to 'Back', user_twaats_path(params[:user_id]) %>
