@@ -1,4 +1,15 @@
-# ======Définition des besoins de Twittor======
+# ======Installation de l'application======
+
+## Prérequis
+- Git
+- Ruby
+- Rails
+
+## Mise en place
+- Clôner le repository.
+- Exécuter la commande : bundle install --path vendor/bundle
+- Exécuter la commande : rails db setup
+- Exécuter la commande : bundle exec rails s
 
 
 
